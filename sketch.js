@@ -47,7 +47,7 @@ function setup() {
 	}
 
 	var plane_options = {
-		isStatic = true,
+		isStatic : true,
 	}
 
 	ball = Bodies.circle(220, 10, 10, circle_options);
@@ -59,11 +59,11 @@ function setup() {
 	rectangle = Bodies.rectangle(350, 50, 10, 10, rectangle_options);
 	World.add(world,rectangle);
 
-	plane = Bodies.rectangle(0, 350, 400, 10, plane_options);
+	plane = Bodies.rectangle(200, 600, 600, 10, plane_options);
 	World.add(world,plane);
 
 	rectMode(CENTER);
-	elipseMode(RADIUS);
+	ellipseMode(RADIUS);
 
 	Engine.run(engine);
 	
@@ -80,11 +80,14 @@ function draw() {
   fill('red');
   rect(rectangle.position.x, rectangle.position.y, 10, 10);
 
-  fill('red');
-  rect(plane.position.x, plane.position.y, 10, 10);
+  fill('blue');
+  rect(plane.position.x, plane.position.y, 600, 10);
 
   fill('red');
-  elipse(ball.position.x, ball.position.y, 10)
+  ellipse(ball.position.x, ball.position.y, 10);
+
+  fill('red');
+  rect(square.position.x, square.position.y, 10, 10);
 
 
  
